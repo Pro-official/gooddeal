@@ -16,7 +16,7 @@ export default function Example() {
   const balanceRef = useRef();
 
   useEffect(() => {
-    fetch("https://dry-peak-78703.herokuapp.com/users")
+    fetch("http://localhost:8000/users")
       .then((res) => res.json())
       .then((data) => setMoney(data));
   }, []);

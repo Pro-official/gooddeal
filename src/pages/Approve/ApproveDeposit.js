@@ -16,12 +16,12 @@ const ApproveDeposit = () => {
     const balance = balanceRef.current.value;
     const name = user.displayName;
     const newBalance = parseFloat(amount) + parseFloat(balance);
-    const updatedBalance = (balance * 1) / 100;
-    const upBalance = parseFloat(balance) + parseFloat(updatedBalance);
-    const depositData = { email, newBalance, upBalance, name };
+    // const updatedBalance = (balance * 1) / 100;
+    // const upBalance = parseFloat(balance) + parseFloat(updatedBalance);
+    const depositData = { email, newBalance, name };
     console.log(depositData);
 
-    fetch(`https://dry-peak-78703.herokuapp.com/deposit/${email}`, {
+    fetch(`http://localhost:8000/deposit/${email}`, {
       method: "PUT",
       headers: {
         "content-type": "application/json",

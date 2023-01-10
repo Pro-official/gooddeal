@@ -25,16 +25,15 @@ function App() {
           <Switch>
             <Route exact path="/" component={Signup} />
             <Route exact path="/signup" component={Signup} />
-            {/* <Route path="*" component={Notfound} /> */}
             <PrivateRoute exact path="/home">
               <Home />
             </PrivateRoute>
             <Route exact path="/login" component={Signin} />
             <Route exact path="/approve-withdraw" component={ApproveWithdraw} />
             <Route exact path="/approve-deposit" component={ApproveDeposit} />
-            <PrivateRoute exact path="/transfer">
+            {/* <PrivateRoute exact path="/transfer">
               <Transfer />
-            </PrivateRoute>
+            </PrivateRoute> */}
             <PrivateRoute exact path="/deposit">
               <Deposit />
             </PrivateRoute>
